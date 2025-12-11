@@ -1,132 +1,101 @@
-# ChronoFrame
+# WithYou
 
-<p align="center">
-  <img src="https://socialify.git.ci/HoshinoSuzumi/chronoframe/image?custom_description=Self-hosted+personal+gallery+application.&description=1&font=KoHo&forks=0&issues=0&logo=https%3A%2F%2Fgithub.com%2FHoshinoSuzumi%2Fchronoframe%2Fraw%2Frefs%2Fheads%2Fmain%2Fpublic%2Ffavicon.svg&name=1&owner=1&pattern=Plus&pulls=0&stargazers=0&theme=Auto" alt="Chronoframe">
+<div align="center">
+  <img src="public/logo.png" width="120" alt="WithYou Logo" />
+  <p>您的自托管照片库，珍藏美好回忆。</p>
+  <p>基于 ChronoFrame 二次开发。</p>
 </p>
 
 <p align="center">
-  <a href="https://github.com/HoshinoSuzumi/chronoframe/releases/latest">
-    <img src="https://badgen.net/github/release/HoshinoSuzumi/chronoframe/stable?icon=docker&label=stable" alt="Latest Release">
-  </a>
-  <a href="https://github.com/HoshinoSuzumi/chronoframe/releases?q=beta&expanded=false">
-    <img src="https://badgen.net/github/release/HoshinoSuzumi/chronoframe?icon=docker&label=nightly" alt="Latest Nightly Release">
-  </a>
   <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
+  <img src="https://img.shields.io/github/stars/nianshu2022/WithYou?style=social" alt="GitHub stars">
 </p>
 
-<p align="center">
-  <a href="https://discord.gg/https://discord.gg/U4vQuydP2m">
-    <img src="https://dcbadge.limes.pink/api/server/https://discord.gg/U4vQuydP2m" alt="Discord Server" />
-  </a>
-</p>
+## ✨ 简介
 
-<p align="center">
-  <a href="https://hellogithub.com/repository/HoshinoSuzumi/chronoframe" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=947d47ffe8404985908b266e187dec99&claim_uid=kLVoiAFPJaBtr1D&theme=neutral" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-  <a href="https://www.producthunt.com/products/chronoframe?embed=true&utm_source=badge-featured&utm_medium=badge&utm_source=badge-chronoframe" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1029556&theme=neutral&t=1761159404569" alt="ChronoFrame - Self&#0045;hosted&#0032;photo&#0032;gallery&#0032;for&#0032;photographers&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-</p>
+**WithYou** 是一款自托管的个人照片库应用，旨在帮助您组织和展示珍贵的照片回忆。它支持自动提取 EXIF 信息、在交互式地图上展示拍摄位置，并提供美观的瀑布流布局。
 
-**Languages:** English | [中文](README_zh.md)
+> 本项目基于 [ChronoFrame](https://github.com/simonno3/chronoframe) 二次开发。
 
-A smooth photo display and management application, supporting multiple image formats and large-size image rendering.
+## 🚀 特性
 
-[Live Demo: TimoYin's Mems](https://lens.bh8.ga)
+- **瀑布流布局**：美观且响应式的照片展示
+- **地图视图**：在地图上探索您的照片足迹
+- **EXIF 解析**：自动提取并展示拍摄参数
+- **S3 兼容**：支持各类 S3 兼容对象存储 (AWS, 腾讯云 COS, MinIO 等)
+- **高性能**：基于服务端渲染 (SSR) 和图片优化技术
+- **隐私优先**：完全自托管，数据掌握在自己手中
 
-## ✨ Features
+### 🖼️ 强大的图片管理
 
-### 🖼️ Powerful Photo Management
+- **在线管理照片** - 通过 Web 界面轻松管理和浏览照片
+- **探索地图** - 在地图上浏览照片拍摄位置
+- **智能 EXIF 解析** - 自动提取拍摄时间、地理位置、相机参数等元数据
+- **地理位置识别** - 自动识别(Reverse Geocoding)照片拍摄地点
+- **多格式支持** - 支持 JPEG、PNG、HEIC/HEIF 等主流图片格式
+- **智能缩略图** - 基于 ThumbHash 技术的高效缩略图生成
 
-- **Manage photos online** - Easily manage and browse photos via the web interface
-- **Explore map** - Browse photo locations on a map
-- **Smart EXIF parsing** - Automatically extracts metadata such as capture time, geolocation, and camera parameters
-- **Reverse geocoding** - Automatically identifies photo shooting locations
-- **Multi-format support** - Supports mainstream formats including JPEG, PNG, HEIC/HEIF
-- **Smart thumbnails** - Efficient thumbnail generation using ThumbHash
+### 🔧 现代技术栈
 
-### 🔧 Modern Tech Stack
+- **Nuxt 4** - 基于最新的 Nuxt 框架，提供 SSR/SSG 支持
+- **TypeScript** - 完整的类型安全保障
+- **TailwindCSS** - 现代化的 CSS 框架
+- **Drizzle ORM** - 类型安全的数据库 ORM
 
-- **Nuxt 4** - Built on the latest Nuxt framework with SSR/SSG support
-- **TypeScript** - Full type safety
-- **TailwindCSS** - Modern CSS framework
-- **Drizzle ORM** - Type-safe database ORM
+### ☁️ 灵活的存储方案
 
-### ☁️ Flexible Storage Solutions
+- **多存储后端** - 支持 S3 兼容存储、本地文件系统
+- **CDN 加速** - 可配置 CDN 地址加速图片访问
 
-- **Multiple storage backends** - Supports S3-compatible storage, local filesystem
-- **CDN acceleration** - Configurable CDN URL for faster photo delivery
+## 🐳 部署
 
-## 🐳 Deployment
+推荐使用 Docker 部署。
 
-We recommend deploying with the prebuilt Docker image. [View the image on ghcr](https://github.com/HoshinoSuzumi/chronoframe/pkgs/container/chronoframe)
+创建 `.env` 文件并配置。
 
-Create a `.env` file and configure environment variables.
-
-Below is a **minimal configuration** example. For complete configuration options, see [Configuration Guide](https://chronoframe.bh8.ga/guide/configuration.html):
+下面是**最小化配置**示例：
 
 ```bash
-# Admin email (required)
+# 管理员邮箱（必须）
 CFRAME_ADMIN_EMAIL=
-# Admin username (optional, default Chronoframe)
+# 管理员用户名（可选，默认 WithYou）
 CFRAME_ADMIN_NAME=
-# Admin password (optional, default CF1234@!)
+# 管理员密码（可选，默认 CF1234@!）
 CFRAME_ADMIN_PASSWORD=
 
-# Site metadata (all optional)
+# 站点信息（均可选）
 NUXT_PUBLIC_APP_TITLE=
 NUXT_PUBLIC_APP_SLOGAN=
 NUXT_PUBLIC_APP_AUTHOR=
 NUXT_PUBLIC_APP_AVATAR_URL=
 
-# Map provider (maplibre/mapbox)
+# 地图提供器 (maplibre/mapbox)
 NUXT_PUBLIC_MAP_PROVIDER=maplibre
-# MapTiler access token for MapLibre
+# 使用 MapLibre 需要 MapTiler 访问令牌
 NUXT_PUBLIC_MAP_MAPLIBRE_TOKEN=
-# Mapbox access token for Mapbox
+# 使用 Mapbox 需要 Mapbox 访问令牌
 NUXT_PUBLIC_MAPBOX_ACCESS_TOKEN=
 
-# Mapbox unrestricted token (optional, reverse geocoding)
+# Mapbox 无域名限制令牌（反向地理编码，可选）
 NUXT_MAPBOX_ACCESS_TOKEN=
 
-# Storage provider (local, s3 or openlist)
+# 存储提供者（local、s3 或 openlist）
 NUXT_STORAGE_PROVIDER=local
 NUXT_PROVIDER_LOCAL_PATH=/app/data/storage
 
-# Session password (32‑char random string, required)
+# 会话密码（必须，32 位随机字符串）
 NUXT_SESSION_PASSWORD=
 ```
 
-### Pull Image
+### Docker Compose（推荐）
 
-Use the published image on GitHub Container Registry and Docker Hub. Choose the source that works best for your network:
-
-#### [GitHub Container Registry (GHCR)](https://github.com/HoshinoSuzumi/chronoframe/pkgs/container/chronoframe)
-
-```bash
-docker pull ghcr.io/hoshinosuzumi/chronoframe:latest
-```
-
-#### [Docker Hub](https://hub.docker.com/r/hoshinosuzumi/chronoframe)
-
-```bash
-docker pull hoshinosuzumi/chronoframe:latest
-```
-
-### Docker
-
-Run with customized environment variables:
-
-```bash
-docker run -d --name chronoframe -p 3000:3000 -v $(pwd)/data:/app/data --env-file .env ghcr.io/hoshinosuzumi/chronoframe:latest
-```
-
-### Docker Compose
-
-Create docker-compose.yml:
+创建 `docker-compose.yml`：
 
 ```yaml
 services:
-  chronoframe:
-    image: ghcr.io/hoshinosuzumi/chronoframe:latest
-    container_name: chronoframe
+  withyou:
+    build: .
+    container_name: withyou
     restart: unless-stopped
     ports:
       - '3000:3000'
@@ -136,207 +105,209 @@ services:
       - .env
 ```
 
-Start:
+启动：
 
 ```bash
 docker-compose up -d
 ```
 
-## 📖 User Guide
+### Docker
 
-> If `CFRAME_ADMIN_EMAIL` and `CFRAME_ADMIN_PASSWORD` are not set, the default admin account is:
+一行命令启动：
+
+```bash
+docker build -t withyou .
+docker run -d --name withyou -p 3000:3000 -v $(pwd)/data:/app/data --env-file .env withyou
+```
+
+## 📖 使用指南
+
+> 如未配置 `CFRAME_ADMIN_EMAIL` 和 `CFRAME_ADMIN_PASSWORD`，默认账号如下：
 >
-> - Email: `admin@chronoframe.com`
-> - Password: `CF1234@!`
+> - 邮箱: `admin@withyou.com`
+> - 密码: `CF1234@!`
 
-### Logging into the Dashboard
+### 登录到控制台
 
-1. Click avatar to sign in with GitHub OAuth or use email/password login
+1. 点击头像跳转到登录页面，可以使用账号密码或 GitHub 登录
 
-### Uploading Photos
+### 上传照片
 
-1. Go to the dashboard at /dashboard
-2. On the Photos page, select and upload images (supports batch & drag-and-drop)
-3. System will automatically parse EXIF data, generate thumbnails, and perform reverse geocoding
+1. 访问仪表板页面 `/dashboard`
+2. 在 `Photos` 页面中选择图片并点击上传（支持批量上传和拖拽上传）
+3. 系统将自动提取 EXIF 信息、生成缩略图并逆编码照片地理位置
 
-## 📸 Screenshots
+## 📸 截图
 
 ![Gallery](./docs/images/screenshot1.png)
 ![Photo Detail](./docs/images/screenshot2.png)
 ![Map Explore](./docs/images/screenshot3.png)
 ![Dashboard](./docs/images/screenshot4.png)
 
-## 🛠️ Development
+## 🛠️ 开发
 
-### Requirements
+### 环境要求
 
 - Node.js 18+
 - pnpm 9.0+
 
-### Install dependencies
+### 安装依赖
 
 ```bash
-# With pnpm (recommended)
+# 使用 pnpm (推荐)
 pnpm install
 
-# Or with other package managers
+# 或使用其他包管理器
 npm install
 yarn install
 ```
 
-### Configure environment variables
+### 配置环境变量
+
+复制环境变量模板并根据需要配置：
 
 ```bash
 cp .env.example .env
 ```
 
-### Initialize database
+### 数据库初始化
 
 ```bash
-# 2. Generate migration files (optional)
+# 2. 生成数据库迁移文件(可选)
 pnpm db:generate
 
-# 3. Run database migrations
+# 3. 执行数据库迁移
 pnpm db:migrate
 ```
 
-### Start development server
+### 启动开发服务器
 
 ```bash
 pnpm dev
 ```
 
-App will start at http://localhost:3000.
+应用将在 `http://localhost:3000` 启动。
 
-### Project Structure
+### 项目结构
 
 ```
-chronoframe/
-├── app/                    # Nuxt app
-│   ├── components/         # Components
-│   ├── pages/              # Page routes
-│   ├── composables/        # Composables
-│   └── stores/             # Pinia stores
+withyou/
+├── app/                    # Nuxt 应用
+│   ├── components/         # 组件
+│   ├── pages/              # 页面路由
+│   ├── composables/        # 组合式函数
+│   └── stores/             # Pinia 状态管理
 ├── packages/
-│   └── webgl-image/        # WebGL image viewer
+│   └── webgl-image/        # WebGL 图片查看器
 ├── server/
-│   ├── api/                # API routes
-│   ├── database/           # DB schema & migrations
-│   └── services/           # Business logic services
-└── shared/                 # Shared types & utils
+│   ├── api/                # API 路由
+│   ├── database/           # 数据库 schema 和迁移
+│   └── services/           # 业务逻辑服务
+└── shared/                 # 共享类型和工具
 ```
 
-### Build commands
+### 构建命令
 
 ```bash
-# Development (with dependencies build)
+# 开发模式 (包含依赖包构建)
 pnpm dev
 
-# Build only dependencies
+# 仅构建依赖包
 pnpm build:deps
 
-# Production build
+# 构建生产版本
 pnpm build
 
-# Database operations
-pnpm db:generate    # Generate migration files
-pnpm db:migrate     # Run migrations
+# 数据库操作
+pnpm db:generate    # 生成迁移文件
+pnpm db:migrate     # 执行迁移
 
-# Preview production build
+# 预览生产版本
 pnpm preview
 ```
 
-## 🤝 Contributing
+## 🤝 贡献
 
-Contributions are welcome! Please:
+欢迎贡献代码！请确保：
 
-1. Fork the repo
-2. Create a feature branch (git checkout -b feature/amazing-feature)
-3. Commit changes (git commit -m 'Add some amazing feature')
-4. Push to branch (git push origin feature/amazing-feature)
-5. Open a Pull Request
+1. Fork 本仓库
+2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
+3. 提交更改 (`git commit -m 'Add some amazing feature'`)
+4. 推送到分支 (`git push origin feature/amazing-feature`)
+5. 开启 Pull Request
 
-### Coding Guidelines
+### 开发规范
 
-- Use TypeScript for type safety
-- Follow ESLint and Prettier conventions
-- Update documentation accordingly
+- 使用 TypeScript 进行类型安全的开发
+- 遵循 ESLint 和 Prettier 代码规范
+- 更新相关文档
 
-## 📄 License
+## 📄 许可证
 
-This project is licensed under the MIT License.
+本项目基于 [MIT 许可证](LICENSE) 开源。
 
-## 👤 Author
+## 👤 作者
 
-**Timothy Yin**
+**nianshu2022**
 
-- Email: master@uniiem.com
-- GitHub: @HoshinoSuzumi
-- Website: bh8.ga
-- Gallery: lens.bh8.ga
+- GitHub: [@nianshu2022](https://github.com/nianshu2022)
+- 项目地址: [WithYou](https://github.com/nianshu2022/WithYou)
 
 ## ❓ FAQ
 
 <details>
-  <summary>How is the admin user created?</summary>
+  <summary>如何创建管理员用户？</summary>
   <p>
-    On first startup, an admin user is created based on <code>CFRAME_ADMIN_EMAIL</code>, <code>CFRAME_ADMIN_NAME</code>, and <code>CFRAME_ADMIN_PASSWORD</code>. The email must match your GitHub account email used for login.
+    首次启动时，会根据环境变量 <code>CFRAME_ADMIN_EMAIL</code>、<code>CFRAME_ADMIN_NAME</code> 和 <code>CFRAME_ADMIN_PASSWORD</code> 环境变量创建一个管理员用户。<code>CFRAME_ADMIN_EMAIL</code> 必须是登录使用的 GitHub 账户的邮箱。
   </p>
 </details>
 <details>
-  <summary>Which image formats are supported?</summary>
+  <summary>支持哪些图片格式？</summary>
   <p>
-    Supported formats: JPEG, PNG, HEIC/HEIF, MOV (for Live Photos).
+    支持 JPEG、PNG、HEIC/HEIF、MOV(作为实况照片) 格式。
   </p>
 </details>
 <details>
-  <summary>Why can’t I use GitHub/Local storage?</summary>
+  <summary>为什么无法使用 GitHub/Local 存储？</summary>
   <p>
-    Currently only S3-compatible storage is supported. GitHub and local storage support is planned.
+    目前支持 S3 兼容存储，未来计划支持 GitHub 和本地文件系统存储。
   </p>
 </details>
 <details>
-  <summary>Why is a map service required and how to configure it?</summary>
+  <summary>为什么需要/如何配置地图服务？</summary>
   <p>
-    The map is used to browse photo locations and render mini-maps in photo details. Currently Mapbox is used. After registering, <a href="https://console.mapbox.com/account/access-tokens/">get an access token</a> and set it to the <code>MAPBOX_TOKEN</code> variable.
+    地图服务用于在地图上浏览照片拍摄位置，以及照片详情中的小地图渲染。目前使用 Mapbox，注册后<a href="https://console.mapbox.com/account/access-tokens/">获取访问令牌</a>并配置到 <code>MAPBOX_TOKEN</code> 环境变量中。
   </p>
 </details>
 <details>
-  <summary>Why wasn’t my MOV file recognized as a Live Photo?</summary>
+  <summary>为什么我上传的 MOV 文件没有被识别为实况照片？</summary>
   <p>
-    Ensure the image (.heic) and video (.mov) share the same filename (e.g., <code>IMG_1234.heic</code> and <code>IMG_1234.mov</code>). Upload order does not matter. If not recognized, you can trigger pairing manually from the dashboard.
+    需要确保实况照片对的图片(.heic)和视频(.mov)的文件名一致（例如 <code>IMG_1234.heic</code> 与 <code>IMG_1234.mov</code> 会自动匹配）。
+    一般情况来说，不管是上传 .heic 还是 .mov，都会检测一次配对，因此上传的顺序无关紧要。
+    如果仍然没有被识别为实况照片，请在仪表盘中找到图片，在操作菜单中手动触发配对检测。
   </p>
 </details>
 <details>
-  <summary>How do I import existing photos from storage?</summary>
+  <summary>如何导入存储中已有的照片？</summary>
   <p>
-    Direct import of existing photos is not yet supported. A directory scanning import feature is planned.
+    目前不支持直接导入已有照片，未来计划支持通过指定目录扫描导入。
   </p>
 </details>
 <details>
-  <summary>How is this different from Afilmory?</summary>
+  <summary>本项目与 Afilmory 有何区别？</summary>
   <p>
-    Afilmory generates a manifest from photos during local/CI processing and serves them statically. ChronoFrame is a dynamic photo management app, offering online upload, management, and browsing—better for frequently updated galleries.
-    In other words, Afilmory = static; ChronoFrame = dynamic, online upload/manage.
+    Afilmory 是一个非常优秀的项目，其部署方式是在本地或 CI 中处理存储中的照片并生成清单文件，然后前端通过读取清单文件来展示照片，属于静态部署。
+    ChronoFrame 则是一个动态的照片管理应用，提供在线上传、管理和浏览照片的功能，适合需要频繁更新照片的场景。
   </p>
 </details>
 
-## 🙏 Acknowledgements
+## 🙏 致谢
 
-This project was inspired by [Afilmory](https://github.com/Afilmory/afilmory), another excellent personal gallery project.
+本项目基于 [ChronoFrame](https://github.com/simonno3/chronoframe) 二次开发。
 
-Thanks to the following open-source projects and libraries:
+感谢以下优秀的开源项目和库：
 
+- [ChronoFrame](https://github.com/simonno3/chronoframe) - 原始项目
 - [Nuxt](https://nuxt.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Drizzle ORM](https://orm.drizzle.team/)
-
-## ⭐️ Star History
-
-<a href="https://www.star-history.com/#HoshinoSuzumi/chronoframe&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HoshinoSuzumi/chronoframe&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HoshinoSuzumi/chronoframe&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HoshinoSuzumi/chronoframe&type=date&legend=top-left" />
- </picture>
-</a>

@@ -4,7 +4,12 @@
   <img src="public/logo.png" width="120" alt="WithYou Logo" />
   <p>您的自托管照片库，珍藏美好回忆。</p>
   <p>基于 ChronoFrame 二次开发。</p>
-</div>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License">
+  <img src="https://img.shields.io/github/stars/nianshu2022/WithYou?style=social" alt="GitHub stars">
+</p>
 
 ## ✨ 简介
 
@@ -44,11 +49,11 @@
 
 ## 🐳 部署
 
-推荐使用预构建的 docker 镜像部署，[在 ghcr 上查看镜像](https://github.com/HoshinoSuzumi/chronoframe/pkgs/container/chronoframe)
+推荐使用 Docker 部署。
 
 创建 `.env` 文件并配置。
 
-下面是**最小化配置**示例，完整的配置项参考 [配置指南](https://chronoframe.bh8.ga/zh/guide/configuration.html)：
+下面是**最小化配置**示例：
 
 ```bash
 # 管理员邮箱（必须）
@@ -82,37 +87,15 @@ NUXT_PROVIDER_LOCAL_PATH=/app/data/storage
 NUXT_SESSION_PASSWORD=
 ```
 
-### 拉取镜像
-
-我们推荐使用预构建的 Docker 镜像进行部署，镜像托管在 GHCR 和 Docker Hub，您可以根据网络情况选择合适的源。
-
-#### [GitHub Container Registry (GHCR)](https://github.com/HoshinoSuzumi/chronoframe/pkgs/container/chronoframe)
-```bash
-docker pull ghcr.io/hoshinosuzumi/chronoframe:latest
-```
-
-#### [Docker Hub](https://hub.docker.com/r/hoshinosuzumi/chronoframe)
-```bash
-docker pull hoshinosuzumi/chronoframe:latest
-```
-
-### Docker
-
-一行命令启动：
-
-```bash
-docker run -d --name chronoframe -p 3000:3000 -v $(pwd)/data:/app/data --env-file .env ghcr.io/hoshinosuzumi/chronoframe:latest
-```
-
-### Docker Compose
+### Docker Compose（推荐）
 
 创建 `docker-compose.yml`：
 
 ```yaml
 services:
-  chronoframe:
-    image: ghcr.io/hoshinosuzumi/chronoframe:latest
-    container_name: chronoframe
+  withyou:
+    build: .
+    container_name: withyou
     restart: unless-stopped
     ports:
       - '3000:3000'
@@ -126,6 +109,15 @@ services:
 
 ```bash
 docker-compose up -d
+```
+
+### Docker
+
+一行命令启动：
+
+```bash
+docker build -t withyou .
+docker run -d --name withyou -p 3000:3000 -v $(pwd)/data:/app/data --env-file .env withyou
 ```
 
 ## 📖 使用指南
@@ -199,7 +191,7 @@ pnpm dev
 ### 项目结构
 
 ```
-chronoframe/
+withyou/
 ├── app/                    # Nuxt 应用
 │   ├── components/         # 组件
 │   ├── pages/              # 页面路由
@@ -256,12 +248,10 @@ pnpm preview
 
 ## 👤 作者
 
-**Timothy Yin**
+**nianshu2022**
 
-- Email: master@uniiem.com
-- GitHub: [@HoshinoSuzumi](https://github.com/HoshinoSuzumi)
-- Website: [bh8.ga](https://bh8.ga)
-- Gallery: [lens.bh8.ga](https://lens.bh8.ga)
+- GitHub: [@nianshu2022](https://github.com/nianshu2022)
+- 项目地址: [WithYou](https://github.com/nianshu2022/WithYou)
 
 ## ❓ FAQ
 
@@ -313,20 +303,11 @@ pnpm preview
 
 ## 🙏 致谢
 
-本项目受启发于 [Afilmory](https://github.com/Afilmory/afilmory)，同样优秀的个人相册项目。
+本项目基于 [ChronoFrame](https://github.com/simonno3/chronoframe) 二次开发。
 
 感谢以下优秀的开源项目和库：
 
+- [ChronoFrame](https://github.com/simonno3/chronoframe) - 原始项目
 - [Nuxt](https://nuxt.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Drizzle ORM](https://orm.drizzle.team/)
-
-## ⭐️ Star History
-
-<a href="https://www.star-history.com/#HoshinoSuzumi/chronoframe&type=date&legend=top-left">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=HoshinoSuzumi/chronoframe&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=HoshinoSuzumi/chronoframe&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=HoshinoSuzumi/chronoframe&type=date&legend=top-left" />
- </picture>
-</a>
