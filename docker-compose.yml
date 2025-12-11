@@ -1,7 +1,7 @@
 services:
-  chronoframe:
-    image: ghcr.io/hoshinosuzumi/chronoframe:latest
-    container_name: chronoframe
+  withyou:
+    build: .
+    container_name: withyou
     restart: unless-stopped
     ports:
       - '3000:3000'
